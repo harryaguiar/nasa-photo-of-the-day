@@ -11,7 +11,7 @@ const PhotoSource = () => {
 
 useEffect(() => {
     axios
-      .get(`https://api.nasa.gov/planetary/apod?api_key=TXx7G4PsPPHF5wym46TSQWDYhLRPdv0QdTgf1N96`)
+      .get(`https://api.nasa.gov/planetary/apod?api_key=VpqSOxNKZeXnjcrbTSAWdHc88GT3PCfImAcO0rBL&date=2020-08-27`)
       .then((res) => {
         console.log("Res: ", res);
         setPhoto(res.data);

@@ -1,13 +1,32 @@
-import React from "react";
+import React from 'react'
+import styled from 'styled-components'
 
-const Description = (props) => {
+function Description({ photo }) {
+    return (
+        <div>
+            <Title>{photo.title}</Title>
+            <Paragraph>{photo.explanation}</Paragraph>
+        </div>
+    )
+}
 
-    const { explanation } = props;
+export default Description
 
-    return (<div>
-        <p>{explanation}</p>
-    </div>
-);    
-};
+const TextDiv = styled.div`
+display: flex;
+background-color: #ddd;
+`
 
-export default Description;
+
+const Title = styled.h1`
+text-align: center;
+margin: auto;
+margin-top: 10px;
+margin-bottom: 10px;
+`
+
+const Paragraph = styled.p`
+width: 80%;
+text-align: center;
+margin: auto;
+`
